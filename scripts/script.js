@@ -14,4 +14,14 @@ window.onload = () => {
             target.classList.add("sketched");
         }
     });
+
+    let newGridButton = document.querySelector("#new-grid-btn");
+
+    newGridButton.addEventListener("click", (e) => {
+        let newSize;
+        do {
+            newSize = prompt("Enter a value 1-100 for the number of squares per side for the new grid:");
+            newSize = parseInt(newSize);
+        } while (isNaN(newSize) || newSize < 1 || newSize > 100);
+    });
 }
