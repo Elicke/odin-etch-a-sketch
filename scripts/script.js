@@ -7,4 +7,11 @@ window.onload = () => {
         let gridSquareClone = gridSquare.cloneNode();
         gridContainer.appendChild(gridSquareClone);
     }
+
+    gridContainer.addEventListener("mouseover", (e) => {
+        let target = e.target;
+        if (!target.classList.contains("sketched")) {
+            target.classList.add("sketched");
+        }
+    });
 }
